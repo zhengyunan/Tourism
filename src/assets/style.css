@@ -1,0 +1,36 @@
+/* 顶部搜索框 */
+.search{
+    width: 100%;
+    height: 5%;
+    background-color: red;
+    display: flex;  
+}
+.search .city{
+    width: 20%;
+    height: 100%;
+    background-color: pink;
+    line-height: 100%;
+
+}
+.search .searchInput{
+    width: 65%;
+    height: 100%;
+    background-color: greenyellow;
+}
+.search .messageImg{
+    width: 15%;
+    height: 100%;
+    background-color: gold;
+}
+/* 顶部轮播 */
+.swipe_s,wv-swipe-item{
+    width: 100%;
+}
+/*底部*/
+.page-footer{ width: 100%; box-shadow: 0 -1px 4px #d7d7d7;  overflow: hidden;}
+.page-footer ul{ width: 100%; background-color: #fff; overflow: hidden;}
+.page-footer ul li{  float: left; width: 20%; text-align: center; padding: 1% 0; }
+.page-footer ul li a{ width: 100%; display: block;}
+.page-footer ul li img{  width: 30%;}
+.page-footer ul li p{ font-size: 1.275em; color: #888d8c;margin-top: 3%;}
+.page-footer ul .footer_active p{ color: #49cfe4;}
