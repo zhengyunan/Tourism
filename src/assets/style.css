@@ -1,3 +1,7 @@
+body{
+    width: 100%;
+    height: 100%;
+}
 /* 顶部搜索框 */
 .search{
     width: 100%;
@@ -125,30 +129,84 @@
 /* 顶部结束 */
 
 /* 详细分类开始 */
-.category{
-    width:100% ;
-    height: 100%;
+.big_category{
+    /* width:100% ;
+    height: 100%; */
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0.4rem 0.4rem 0.2rem;
+    /* border-radius: 0.5rem; */
 }
-.category_hotal{
+.big_category .small_category{
     width: 100%;
    height: 10rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 0.5rem;
+    
 }
-.hotal_left{
-    width: 32%;
+/* 公共样式 */
+.big_category .total_left{
+    width: 33.33%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
+    background-size: 40% 50%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid rgb(214, 210, 210);;
 }
-.hotal_middle{
-    width: 32%;
-    height: 100%;
-    background-color: pink;
+.big_category  p{
+    /* box-sizing: border-box; */
+    padding-top: 10% ;
+ }
+ /* 公共样式end */
+.big_category .category_hotal{
+    background-color: #ff5764;
 }
-.hotal_right{
-    width: 32%;
+.big_category .category_fligth{
+    background-color: #5b94ff;
+}
+.big_category .category_holiday{
+    background-color: #00d581;
+}
+.big_category .category_hotal .hotal_left{
+    background-image: url("./images/category_hotel.png");
+}
+.big_category .category_fligth .fligth_left{
+    background-image: url("./images/category_flight.png");
+}
+.big_category .category_holiday .holiday_left{
+    background-image: url("./images/category_holiday.png");
+}
+.middle_coumn{
+    width: 33.33%;
     height: 100%;
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+    border-right: 1px solid rgb(214, 210, 210);
+    border-top: none;
+}
+/* div */
+
+.category_s{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(214, 210, 210);;
+    
+}
+.big_category .category_money{
+    width: 100%;
+   height: 5rem;
+    display: flex;
+    justify-content: center;
+
 }
 /* 详细分类结束 */
 /*底部*/
