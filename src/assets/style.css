@@ -2,30 +2,155 @@
 .search{
     width: 100%;
     height: 5%;
-    background-color: red;
+  
     display: flex;  
+    align-items: center;  
+    justify-content: center;
 }
 .search .city{
     width: 20%;
     height: 100%;
-    background-color: pink;
-    line-height: 100%;
+
+    
+}
+.search .city a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    color: #fff;
+    font-size: 1.275em;
+
+}
+
+.search .city img{
+    width: 30%;
+    height: 60%;
+    margin-top: 3%;
 
 }
 .search .searchInput{
     width: 65%;
     height: 100%;
-    background-color: greenyellow;
+    border-radius: 2%;
+    background-color: #fff;
+    padding: 1% 2% 1% 2%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    border-radius: 5px;
+  
+}
+.search .searchInput .search_ioc{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+   
+}
+.search .searchInput .search_ioc i{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+}
+.search .searchInput .search_ioc img{
+    width: 60%;
+    height: 90%;
+    
+}
+.search .searchInput .search_text{
+    width: 60%;
+    height: 100%;
+    /* background-color: salmon; */
+}
+.search .searchInput .search_text input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-width: 0px;
+    font-size: 1.2em;
+}
+.search .searchInput .search_rabot{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    
+    
+}
+.search .searchInput .search_rabot img{
+    width: 70%;
+    height: 80%;
+
 }
 .search .messageImg{
     width: 15%;
     height: 100%;
-    background-color: gold;
+
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    
 }
+.search .messageImg i{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color:#ff3838;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}
+.search .messageImg img{
+    width: 50%;
+    height: 80%;
+}
+
 /* 顶部轮播 */
-.swipe_s,wv-swipe-item{
+.swipe_s,wv-swipe-item , .swipe_s img{
     width: 100%;
+    height: 100%;
 }
+/* 顶部结束 */
+
+/* 详细分类开始 */
+.category{
+    width:100% ;
+    height: 100%;
+}
+.category_hotal{
+    width: 100%;
+   height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.hotal_left{
+    width: 32%;
+    height: 100%;
+    background-color: red;
+}
+.hotal_middle{
+    width: 32%;
+    height: 100%;
+    background-color: pink;
+}
+.hotal_right{
+    width: 32%;
+    height: 100%;
+    background-color: green;
+}
+/* 详细分类结束 */
 /*底部*/
 .page-footer{ width: 100%; box-shadow: 0 -1px 4px #d7d7d7;  overflow: hidden;}
 .page-footer ul{ width: 100%; background-color: #fff; overflow: hidden;}
@@ -34,3 +159,4 @@
 .page-footer ul li img{  width: 30%;}
 .page-footer ul li p{ font-size: 1.275em; color: #888d8c;margin-top: 3%;}
 .page-footer ul .footer_active p{ color: #49cfe4;}
+/* 底部结束 */
