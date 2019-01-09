@@ -1,11 +1,14 @@
+/* 首页 */
 body{
     width: 100%;
     height: 100%;
+    margin-bottom: 15%;
 }
+
 /* 顶部搜索框 */
 .search{
     width: 100%;
-    height: 5%;
+    /* height: 5%; */
   
     display: flex;  
     align-items: center;  
@@ -147,7 +150,11 @@ body{
     
 }
 /* 公共样式 */
+.big_category a{
+    color: #fff;
+}
 .big_category .total_left{
+    /* display: block; */
     width: 33.33%;
     height: 100%;
     /* background-color: red; */
@@ -156,7 +163,9 @@ body{
     background-position: center bottom;
     display: flex;
     justify-content: center;
-    border-right: 1px solid rgb(214, 210, 210);;
+    border-right: 1px solid rgb(214, 210, 210);
+    text-decoration:none;
+    color: #fff;
 }
 .big_category  p{
     /* box-sizing: border-box; */
@@ -208,13 +217,128 @@ body{
     justify-content: center;
 
 }
+/* 没有右边框 */
+.noborder_right{
+    border-right: none;
+}
+/* 没有上边框 */
+.noborder_top{
+    border-top: none;
+}
 /* 详细分类结束 */
-/*底部*/
+
+/* 带有图标的分类开始 */
+.ioc_category{
+    margin-top: 1rem;
+    /* background-color: red; */
+    width: 100%;
+    height: 15rem;
+    flex-wrap:wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ioc_category .small_ioc{
+    width: 20%;
+    height: 50%;
+}
+.ioc_category .small_ioc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ioc_category .small_ioc i , .ioc_category .small_ioc p{
+    display: block;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.ioc_category .small_ioc img{
+    height: 100%;
+}
+/* 带有分类的图标结束 */
+/*首页底部*/
 .page-footer{ width: 100%; box-shadow: 0 -1px 4px #d7d7d7;  overflow: hidden;}
 .page-footer ul{ width: 100%; background-color: #fff; overflow: hidden;}
-.page-footer ul li{  float: left; width: 20%; text-align: center; padding: 1% 0; }
+.page-footer ul li{  float: left; width: 25%; text-align: center; padding: 1% 0; }
 .page-footer ul li a{ width: 100%; display: block;}
 .page-footer ul li img{  width: 30%;}
 .page-footer ul li p{ font-size: 1.275em; color: #888d8c;margin-top: 3%;}
 .page-footer ul .footer_active p{ color: #49cfe4;}
 /* 底部结束 */
+
+ 
+
+/* 首页中的酒店页 */
+.hotel_topImg{
+    width: 100%;
+    height: 18.8rem;
+    /* background-color: red; */
+    background-image: url("./images/hotel_bgi.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hotel_topImg .return_ioc{
+    position: absolute;
+    
+    display: inline-block;
+    width: 12%;
+    height: 12%;
+    top: 1.2rem;
+    left: 1.8rem;
+    background-image: url("./images/return2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    
+}
+/* .hotel_topImg .ioc{
+   
+    display: block;
+    width: 5%;
+    height: 7%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    
+} */
+.hotel_topImg .middle_topimg{
+    display: block;
+    height: 20%; 
+    position: absolute;
+    top: 1.2rem;
+    right: 6rem;
+    color: #fff;
+}
+.hotel_topImg .right_topimg{
+    display: block;
+    height: 20%; 
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    color: #fff;
+}
+.hotel_topImg .middle_ioc{
+    display: block;
+    margin-left: 23%;
+    width: 50%;
+    height: 40%;
+    background-image: url("./images/red_money.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+.hotel_topImg .right_ico{
+    display: block;
+    margin-left: 23%;
+    width: 50%;
+    height: 40%;
+    background-image: url("./images/small_hotel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+/* 首页中的酒店页end */
+/* 首页end */

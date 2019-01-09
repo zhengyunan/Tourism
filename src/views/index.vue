@@ -10,18 +10,11 @@
                       <p>首页</p>
                  </router-link>
               </li>
-              <li :class="{'footer_active':$route.name=='trip'}">
-                 <router-link to="/trip">
-                 <img v-if="$route.name=='trip'" src="../assets/images/lu1.png" alt="">
-                 <img v-else src="../assets/images/lu2.png" alt="">
-                       <p>行程</p>
-                 </router-link>
-              </li>
-              <li :class="{'footer_active':$route.name=='play'}">
-                 <router-link  to="/play">
-                       <img v-if="$route.name=='play'" src="../assets/images/play1.png" alt="">
-                       <img v-else src="../assets/images/play2.png" alt="">
-                       <p>趣浪</p>
+              <li :class="{'footer_active':$route.name=='order'}">
+                 <router-link to="/order">
+                 <img v-if="$route.name=='order'" src="../assets/images/order1.png" alt="">
+                 <img v-else src="../assets/images/order2.png" alt="">
+                       <p>订单</p>
                  </router-link>
               </li>
               <li :class="{'footer_active':$route.name=='customer'}">

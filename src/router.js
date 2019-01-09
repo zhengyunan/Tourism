@@ -19,14 +19,9 @@ export default new Router({
             component: () => import('./views/IndexChild/index.vue')
           },
          {
-          path: '/trip',
-          name: 'trip',
-          component: () => import('./views/IndexChild/trip.vue')
-        },
-        {
-          path: '/play',
-          name: 'play',
-          component: () => import('./views/IndexChild/play.vue')
+          path: '/order',
+          name: 'order',
+          component: () => import('./views/IndexChild/order.vue')
         },
         {
           path: '/customer',
@@ -39,6 +34,11 @@ export default new Router({
           component: () => import('./views/IndexChild/my.vue')
         },
       ]
+    },
+    {
+      path: '/hotel',
+      name: 'Hotel',
+      component: () => import('./views/Hotel.vue')
     }
    
     
