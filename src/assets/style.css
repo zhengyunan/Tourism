@@ -294,16 +294,6 @@ body{
     background-position: 0 0;
     
 }
-/* .hotel_topImg .ioc{
-   
-    display: block;
-    width: 5%;
-    height: 7%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 0;
-    
-} */
 .hotel_topImg .middle_topimg{
     display: block;
     height: 20%; 
@@ -340,5 +330,45 @@ body{
     background-size: contain;
     background-position: 0 0;
 }
+/* tab start */
+.line-tab-box{
+    position: relative;
+    /* width: 100%; */
+    height: 5.6rem;
+    margin: -56px 12px 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.8rem;
+}
+.line-tab-box ul{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.line-tab-box li{
+    width: 50%;
+    padding: 0 2rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right:1px solid #666;   
+}
+.line-tab-box .clock{
+    border-right: none;
+}
+.line-tab-box .line{
+    position: absolute;
+    width: 30%;
+    height: 0.3rem;
+    background-color: #25a4bb;
+    top: 5.3rem;
+    left: 3.5rem;
+}
+
+/* tab end */
 /* 首页中的酒店页end */
 /* 首页end */
