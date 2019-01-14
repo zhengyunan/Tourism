@@ -3,6 +3,7 @@ body{
     width: 100%;
     height: 100%;
     margin-bottom: 15%;
+    
 }
 
 /* 顶部搜索框 */
@@ -276,7 +277,7 @@ body{
     height: 18.8rem;
     /* background-color: red; */
     background-image: url("./images/hotel_bgi.jpg");
-    background-size: contain;
+    background-size:cover ;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -333,42 +334,120 @@ body{
 /* tab start */
 .line-tab-box{
     position: relative;
-    /* width: 100%; */
-    height: 5.6rem;
     margin: -56px 12px 0;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     font-size: 1.8rem;
 }
-.line-tab-box ul{
+.line-tab-box .el-tabs{
     width: 100%;
     height: 100%;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center
+    
 }
-.line-tab-box li{
+.el-tabs__nav{
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+}
+#tab-0,#tab-1{
+    height: 40px;
+    text-align: center;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    color: #000;
+    
+}
+.el-tabs__item{
     width: 50%;
-    padding: 0 2rem;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right:1px solid #666;   
-}
-.line-tab-box .clock{
-    border-right: none;
-}
-.line-tab-box .line{
-    position: absolute;
-    width: 30%;
-    height: 0.3rem;
-    background-color: #25a4bb;
-    top: 5.3rem;
-    left: 3.5rem;
 }
 
+
+/* 全日房 start */
+.location{
+    height: 6rem;
+    width: 100%;
+     /* background-color: gold; */
+     position: relative;
+}
+.grid-content{
+    text-align: center;
+    line-height: 6rem;
+}
+.grid-line{
+    line-height: 6rem;
+    font-size:2.5rem;
+    color: #303133;
+}
+.grid-dingwei{
+    text-align: center;
+}
+.my_location .dingwei{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./images/location.png");
+    background-repeat: no-repeat;
+    background-position: center,center;
+    background-size: 2rem 2rem;
+    /* box-sizing: border-box; */
+    /* padding: 1.5rem 0 1rem 2rem; */
+    margin:  1rem 0 0.5rem 3.5rem;
+    color: rgb(96, 125, 139);
+}
+.my_location{
+    font-size: 1.5rem;
+}
+.location{
+    border-bottom: 0.1rem solid #edf2f5;
+}
+/* .midd_ul ul{
+    display: flex;
+} */
+.midd_ul li{
+    line-height: 2.5rem;
+}
+.date_xuanze{
+    font-size: 1.8rem;
+}
+.date_day , .check-in_time{
+    margin-right: 0.5rem;
+}
+.check-in_time{
+    font-size: 1rem;
+    color: #8c8c8c;
+}
+.search_hotal_name .midd ,.hotal_price .midd{
+    font-size: 16px;
+    color: #bdbdbd;
+}
+.search_btn{
+    height: 60px;
+}
+.search_btn .btn_button{
+    width: 95%;
+    height: 40px;
+    background-color: #ff9800;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    margin-top: 10px;
+}
+.other-link{
+    /* font-size: 14px;
+    color:  #7a7d9a; */
+}
+.other-link_css{
+    color: #7a7d9a;
+    font-size: 14px;
+    border-right: 1px solid #edf2f5;
+}
+.other-link .other-link_css .last_link{
+    border-right: none;
+}
+/* 全日房 end */
 /* tab end */
 /* 首页中的酒店页end */
 /* 首页end */

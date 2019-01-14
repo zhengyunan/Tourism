@@ -9,6 +9,7 @@
                     <wv-swipe-item><img src="../../assets/images/2.jpg" alt=""></wv-swipe-item>
                     <wv-swipe-item><img src="../../assets/images/1.jpg" alt=""></wv-swipe-item> 
                 </wv-swipe>
+                
             </div>
             <div class="search fixed-header">
                 <div class="city">
@@ -131,3 +132,17 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            height:300
+        }
+    },
+    methods:{
+        click_popup(){
+            console.log(123)
+        }
+    }
+}
+</script>
