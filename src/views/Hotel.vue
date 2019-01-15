@@ -59,7 +59,7 @@
                             <el-col :span="2"><div class="grid-content bg-purple border_botttom"><i class="el-icon-arrow-right"></i></div></el-col>
                         </el-row>
                     </div>
-                    <div class="hotal_price location">
+                    <div class="hotal_price location" @click="popup_allday">
                         <el-row :gutter="5" class="border_botttom">
                             <el-col :span="4"><div class="grid-content bg-purple"><i class="el-icon-search"></i></div></el-col>
                             <el-col :span="18"><div class="grid-line bg-purple-light midd">
@@ -82,6 +82,7 @@
                         </el-row>
                     </div>
                 </el-tab-pane>
+                
                 <el-tab-pane label="钟点房" class="clock">
                     <div class="location">
                         <el-row :gutter="5" class="border_botttom">
@@ -113,7 +114,7 @@
                             <el-col :span="2"><div class="grid-content bg-purple border_botttom"><i class="el-icon-arrow-right"></i></div></el-col>
                         </el-row>
                     </div>
-                    <div class="hotal_price location" @click="popup">
+                    <div class="hotal_price location" @click="popup_click">
                         <el-row :gutter="5" class="border_botttom">
                             <el-col :span="4"><div class="grid-content bg-purple"><i class="el-icon-search"></i></div></el-col>
                             <el-col :span="18"><div class="grid-line bg-purple-light midd">
@@ -138,20 +139,45 @@
                 </el-tab-pane>
             </el-tabs>
         </div>
-        
-        <wv-popup :visible.sync="popupVisible2" :height="300">
-            <!-- <wv-group>
-                <wv-checklist
-                title="限制最多选两个"
-                name=""
-                :options="options"
-                v-model="checkedItems2"
-                :max="2"
-                @change="onChange"
-                />
-            </wv-group> -->
+        <!-- 弹出框全日 -->
+         <wv-popup :visible.sync="popupVisible1" :height="400">
+            <div class="start">
+                <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="allday_startClick(v,k)" :key="k">{{v}}</wv-button>
+                
+            </div>
+            <div class="search_price">
+               <p>价格:</p><el-slider
+                v-model="value1"
+                range
+                :step="20"
+                :show-stops="true"
+                :show-input="true"
+                :max="500">
+                </el-slider>
+            </div>
         </wv-popup>
-                   
+        <!-- 全日弹出框end -->
+        <!-- 钟点房弹出框 -->
+        <wv-popup :visible.sync="popupVisible2" :height="400">
+            <div class="start">
+                <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="clock_startClick(v,k)" :key="k">{{v}}</wv-button>
+                
+            </div>
+            <div class="clock_time">
+                <wv-button type="default" :id="k==timeIndex?'border_start':''" :mini="true" v-for="(v,k) in timeClass"  @click="clock_timeClick(v,k)" :key="k">{{v}}</wv-button>
+            </div>
+            <div class="search_price">
+               <p>价格:</p><el-slider
+                v-model="value2"
+                range
+                :step="20"
+                :show-stops="true"
+                :show-input="true"
+                :max="100">
+                </el-slider>
+            </div>
+        </wv-popup>
+        <!-- 钟点房弹出框end -->
     </div>
 </template>
 <style scoped>
@@ -159,45 +185,52 @@
         background-color: #edf2f5;
         height: 667px;
     }
+
+    #border_start{
+        border: 1px solid #25a4bb;
+}
+.el-slider__runway.show-input{
+    margin-right: 9rem;
+}
+.search_price .el-slider{
+    padding-left: 3rem;
+}
 </style>
 <script>
+
 export default {
     data(){
         return{
-            popupVisible2: false,
-            height:300,
-            // onShow:true,
-            // onHide:false
-    //         options: [
-    //                 {
-    //                 label: '选项1',
-    //                 value: 'value1'
-    //                 },
-    //                 {
-    //                 label: '选项2',
-    //                 value: 'value2'
-    //                 },
-    //                 {
-    //                 label: '选项3',
-    //                 value: 'value3'
-    //                 },
-    //                 {
-    //                 label: '选项4（禁用）',
-    //                 value: 'value4',
-                    
-    //                 }
-    //             ],
-    //   checkedItems2: ['value1', 'value2', 'value3'],
+           percent2: 1,
+           popupVisible2: false,
+           popupVisible1: false,
+           starClass:['经济','一星','两星','三星','四星','五星'],
+           timeClass:['<三小时','三小时','四小时','>四小时'],
+           startIndex:0,
+           timeIndex:0,
+           value1: [0, 100],
+           value2: [0, 50]
         }
     },
     methods:{
-       popup(){
+       popup_click(){
            this.popupVisible2 = !this.popupVisible2;
        },
-    //     onChange () {
-    //   console.log(val)
-    // }
-        
+       clock_startClick(item,k){
+          this.startIndex = k
+       },
+       clock_timeClick(item,k){
+           this.timeIndex = k
+       },
+       popup_allday(){
+           this.popupVisible1 = !this.popupVisible1;
+       },
+       allday_startClick(item,k){
+          this.startIndex = k
+       },
+       allday_timeClick(item,k){
+           this.timeIndex = k
+       },
     }
 }
 </script>

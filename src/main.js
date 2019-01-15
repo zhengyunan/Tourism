@@ -7,15 +7,19 @@ import 'we-vue/lib/style.css'
 import "./assets/reset.css"
 import './Element.js'
 // 实现轮播
-import { Swipe, SwipeItem ,Group ,Cell} from 'we-vue'
-
+import { Swipe, SwipeItem } from 'we-vue'
 Vue.use(Swipe).use(SwipeItem)
+import { Group, Cell } from 'we-vue'
+Vue.use(Group).use(Cell)
 import { Popup } from 'we-vue'
-Vue.component(Popup.name, Popup)
-Vue.component(Group.name, Group)
-Vue.component(Cell.name, Cell)
-// import { CheckList } from 'we-vue'
-// Vue.use(CheckList)
+Vue.use(Popup)
+import { checklist } from 'we-vue'
+Vue.use(checklist)
+import { Slider } from 'we-vue'
+Vue.use(Slider)
+import { Button } from 'we-vue'
+Vue.use(Button)
+
 
 new Vue({
   router,

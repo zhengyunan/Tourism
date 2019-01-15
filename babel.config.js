@@ -10,13 +10,14 @@ module.exports = {
         "styleLibraryName": "theme-chalk"
       }
     ],
-    [
-      "import", [
-      {
-        "libraryName": "we-vue",
-        "style": "style.css"
-      }
-    ]
-  ]
+    ["import", { "libraryName": "we-vue", "style": "style.css" }, "we-vue"]
+  //   [
+  //     "import", [
+  //     {
+  //       "libraryName": "we-vue",
+  //       "style": "style.css"
+  //     }
+  //   ]
+  // ]
 ]
 }

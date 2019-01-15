@@ -258,6 +258,7 @@ body{
 .ioc_category .small_ioc img{
     height: 100%;
 }
+
 /* 带有分类的图标结束 */
 /*首页底部*/
 .page-footer{ width: 100%; box-shadow: 0 -1px 4px #d7d7d7;  overflow: hidden;}
@@ -448,6 +449,15 @@ body{
     border-right: none;
 }
 /* 全日房 end */
+/* 钟点房start */
+.start{
+    margin: 3rem 0;
+}
+.search_price p{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 2rem 0 1rem 2rem;
+}
 /* tab end */
 /* 首页中的酒店页end */
 /* 首页end */
