@@ -6,6 +6,6 @@
 
 <style>
    @import './assets/base.css';
-   @import './assets/style.css';
+   
 </style>
 

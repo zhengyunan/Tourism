@@ -1,0 +1,14 @@
+header{
+    width: 100%;
+   
+    background-color: rosybrown;
+}
+.hotel_list .return_ioc{
+    display: inline-block;
+     width: 3rem;
+     height: 3rem;
+     background-image: url("images/return2.png");
+     background-position: center center;
+     background-size:cover ;
+     background-repeat: no-repeat;
+}

@@ -1,5 +1,6 @@
 <template>
-    <div class="qn">
+    <div>
+        <div class="qn">
         <header>
             <div class="swipe">
                 <wv-swipe class="swipe_s" :height="130" :autoplay="4000">
@@ -131,7 +132,12 @@
             
         </div>
     </div>
+    </div>
 </template>
+<style scoped>
+@import '../../assets/style.css';
+</style>
+
 <script>
 export default {
     data(){
