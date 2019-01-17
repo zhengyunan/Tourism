@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="qn">
+        <!--  顶部start-->
         <header>
             <div class="swipe">
                 <wv-swipe class="swipe_s" :height="130" :autoplay="4000">
@@ -15,10 +16,8 @@
             <div class="search fixed-header">
                 <div class="city">
                     <router-link to="/">
-                        <p>沭阳县</p>
-                         
+                        <p>沭阳县</p>   
                             <img src="../../assets/images/button_triangle.png" alt="">
-                    
                     </router-link>
                     
                 </div>
@@ -42,6 +41,9 @@
                 </div>
             </div>
         </header>
+        <!--  顶部end-->
+        
+        <!-- 详细分类start -->
         <div class="big_category">
            <div class="category_hotal small_category">
                 <router-link to="/hotel" class="hotal_left total_left"><p>酒店</p></router-link>
@@ -77,10 +79,11 @@
                 </div>
            </div>
         </div>
-        
+        <!-- 详细分类结束  -->
+
+        <!-- 带有图标的分类开始 -->
         <div class="ioc_category">
-            <div class="small_ioc group_tour ">
-                <!-- <i>123</i> -->
+            <div class="small_ioc">
                 <i><img src="../../assets/images/group_tour.png" alt=""></i>
                 <p>跟团游</p>
             </div>
@@ -131,13 +134,10 @@
             </div>
             
         </div>
+        <!-- 带有图标的分类结束 -->
     </div>
     </div>
 </template>
-<style scoped>
-@import '../../assets/style.css';
-</style>
-
 <script>
 export default {
     data(){

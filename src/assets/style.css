@@ -1,22 +1,24 @@
-/* 首页 */
+/* ==================首页index.vue============================ */
 
+/* 顶部轮播 */
+.swipe_s,wv-swipe-item , .swipe_s img{
+    width: 100%;
+    height: 100%;
+}
+/* 顶部轮播结束 */
 
 /* 顶部搜索框 */
 .search{
     width: 100%;
-    /* height: 5%; */
-  
     display: flex;  
     align-items: center;  
     justify-content: center;
 }
 .search .city{
     width: 20%;
-    height: 100%;
-
-    
+    height: 100%; 
 }
-.search .city a{
+.search .city a{ 
     display: block;
     width: 100%;
     height: 100%;
@@ -25,14 +27,11 @@
     justify-content: center;
     color: #fff;
     font-size: 1.275em;
-
 }
-
 .search .city img{
     width: 30%;
     height: 60%;
     margin-top: 3%;
-
 }
 .search .searchInput{
     width: 65%;
@@ -44,8 +43,7 @@
     display: flex;
     align-items: center;  
     justify-content: center;
-    border-radius: 5px;
-  
+    border-radius: 0.5rem;
 }
 .search .searchInput .search_ioc{
     width: 20%;
@@ -107,39 +105,30 @@
 }
 .search .messageImg i{
     display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
     background-color:#ff3838;
     position: absolute;
-    top: 4px;
-    right: 5px;
+    top: 0.4rem;
+    right: 0.5rem;
 }
 .search .messageImg img{
     width: 50%;
     height: 80%;
 }
-
-/* 顶部轮播 */
-.swipe_s,wv-swipe-item , .swipe_s img{
-    width: 100%;
-    height: 100%;
-}
 /* 顶部结束 */
 
 /* 详细分类开始 */
 .big_category{
-    /* width:100% ;
-    height: 100%; */
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #fff;
     padding: 0.4rem 0.4rem 0.2rem;
-    /* border-radius: 0.5rem; */
 }
 .big_category .small_category{
     width: 100%;
-   height: 10rem;
+    height: 10rem;
     display: flex;
     justify-content: center;
     margin-bottom: 0.5rem;
@@ -150,10 +139,8 @@
     color: #fff;
 }
 .big_category .total_left{
-    /* display: block; */
     width: 33.33%;
     height: 100%;
-    /* background-color: red; */
     background-size: 40% 50%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -164,10 +151,10 @@
     color: #fff;
 }
 .big_category  p{
-    /* box-sizing: border-box; */
     padding-top: 10% ;
- }
+}
  /* 公共样式end */
+
 .big_category .category_hotal{
     background-color: #ff5764;
 }
@@ -186,18 +173,15 @@
 .big_category .category_holiday .holiday_left{
     background-image: url("./images/category_holiday.png");
 }
-.middle_coumn{
+.big_category .middle_coumn{
     width: 33.33%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: pink; */
     border-right: 1px solid rgb(214, 210, 210);
     border-top: none;
 }
-/* div */
-
-.category_s{
+.big_category .category_s{
     width: 100%;
     height: 50%;
     display: flex;
@@ -206,42 +190,30 @@
     border-top: 1px solid rgb(214, 210, 210);;
     
 }
-.big_category .category_money{
-    width: 100%;
-   height: 5rem;
-    display: flex;
-    justify-content: center;
-
-}
 /* 没有右边框 */
-.noborder_right{
+.big_category .noborder_right{
     border-right: none;
 }
 /* 没有上边框 */
-.noborder_top{
+.big_category .noborder_top{
     border-top: none;
 }
 /* 详细分类结束 */
 
+
 /* 带有图标的分类开始 */
 .ioc_category{
     margin-top: 1rem;
-    /* background-color: red; */
     width: 100%;
     height: 15rem;
     flex-wrap:wrap;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .ioc_category .small_ioc{
     width: 20%;
     height: 50%;
-}
-.ioc_category .small_ioc {
-    display: flex;
-    flex-wrap: wrap;
 }
 .ioc_category .small_ioc i , .ioc_category .small_ioc p{
     display: block;
@@ -253,10 +225,13 @@
 .ioc_category .small_ioc img{
     height: 100%;
 }
-
 /* 带有分类的图标结束 */
+
+/* index.vue  ===================首页结束 ================*/
+
+
 /*首页底部*/
-.page-footer{ width: 100%; box-shadow: 0 -1px 4px #d7d7d7;  overflow: hidden;}
+.page-footer{ width: 100%; box-shadow: 0 -1px 0.4rem #d7d7d7;  overflow: hidden;}
 .page-footer ul{ width: 100%; background-color: #fff; overflow: hidden;}
 .page-footer ul li{  float: left; width: 25%; text-align: center; padding: 1% 0; }
 .page-footer ul li a{ width: 100%; display: block;}
@@ -266,3 +241,349 @@
 /* 底部结束 */
 
  
+
+/* ========================首页中的酒店页start  hotel.vue===================== */
+.bodycss{
+    position: fixed;
+    background-color: #edf2f5;
+    height: 66.7rem;
+}
+
+/* 顶部返回按钮 以及红包和附近酒店按钮 */
+.hotel_topImg{
+    width: 100%;
+    height: 18.8rem;
+    background-image: url("./images/hotel_bgi.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hotel_topImg .left_topimg .return_ioc{
+    position: absolute;
+    display: inline-block;
+    width: 12%;
+    height: 12%;
+    top: 1.2rem;
+    left: 1.8rem;
+    background-image: url("./images/return2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    
+}
+.hotel_topImg .middle_topimg{
+    display: block;
+    height: 20%; 
+    position: absolute;
+    top: 1.2rem;
+    right: 6rem;
+    color: #fff;
+}
+.hotel_topImg .right_topimg{
+    display: block;
+    height: 20%; 
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    color: #fff;
+}
+.hotel_topImg .middle_topimg .middle_ioc{
+    display: block;
+    margin-left: 23%;
+    width: 50%;
+    height: 40%;
+    background-image: url("./images/red_money.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+.hotel_topImg .right_topimg .right_ico{
+    display: block;
+    margin-left: 23%;
+    width: 50%;
+    height: 40%;
+    background-image: url("./images/small_hotel.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+}
+
+/* 顶部返回按钮 以及红包和附近酒店按钮end  */
+
+
+/*全日房和钟点房相互切换 tab start */
+.line-tab-box{
+    position: relative;
+    margin: -5.4rem 1.2rem 0;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.8rem;
+}
+.line-tab-box .el-tabs{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    
+}
+.line-tab-box .el-tabs__nav{
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+}
+.line-tab-box #tab-0, .line-tab-box #tab-1{
+    height: 4rem;
+    text-align: center;
+    line-height: 5.5rem;
+    font-size: 1.6rem;
+    color: #000;
+}
+.line-tab-box .el-tabs__item{
+    width: 50%;
+}
+
+/* 全日房 和钟点房公共样式 start */
+.line-tab-box .location{
+    height: 6rem;
+    width: 100%;
+    position: relative;
+    border-bottom: 0.1rem solid #edf2f5;
+}
+.line-tab-box .date{
+    height: 8rem;
+    position: relative;
+    border-bottom: 0.1rem solid #edf2f5;
+}
+.line-tab-box .grid-line{
+    line-height: 6rem;
+    font-size:2.5rem;
+    color: #303133;
+}
+.line-tab-box .grid-dingwei{
+    text-align: center;
+}
+.line-tab-box .my_location{
+    font-size: 1.5rem;
+}
+.line-tab-box .grid-content{ 
+    text-align: center;
+    line-height: 6rem;
+}
+.line-tab-box .my_location .dingwei{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./images/location.png");
+    background-repeat: no-repeat;
+    background-position: center,center;
+    background-size: 2rem 2rem;
+    margin:  1rem 0 0.5rem 3.5rem;
+    color: rgb(96, 125, 139);
+}
+
+.line-tab-box .midd_ul li{
+    line-height: 2.5rem;
+}
+.line-tab-box .hotal_price .midd , .line-tab-box .search_hotal_name .midd{
+    font-size: 1.6rem;
+    color: #bdbdbd;
+}
+.line-tab-box .search_hotal_name .midd input:focus{
+    color: #303133
+}
+.line-tab-box .search_btn{
+    height: 6rem;
+}
+.line-tab-box .search_btn .btn_button{
+    width: 95%;
+    height: 4rem;
+    background-color: #ff9800;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 4rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+.line-tab-box .search_btn a{
+    color: #fff;
+}
+.line-tab-box .other-link .other-link_css{
+    color: #7a7d9a;
+    font-size: 1.4rem;
+    border-right: 0.1rem solid #edf2f5;
+}
+.other-link .other-link_css .last_link{
+    border-right: none;
+}
+.line-tab-box .search_input input { 
+    width: 100%;
+    border: none;
+    outline: none; 
+    -webkit-appearance: none;
+ }
+
+/* 全日房 和钟点房公共样式end */
+
+/* 全日房 和钟点房 弹出框公共样式 start  */
+.tanchu .start{
+    margin: 3rem 0;
+}
+.tanchu .search_price p{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 2rem 0 1rem 2rem;
+}
+#border_start{
+    border: 0.1rem solid #25a4bb;
+}
+.tanchu  .search_price .el-slider{
+padding-left: 3rem;
+}
+/* 全日房 和钟点房 弹出框公共样式 start */
+
+
+/* 全日房和钟点房相互切换 tab */
+
+/* ========================首页中的酒店页 end  hotel.vue=====================  */
+
+/* ========================酒店列表页start  SelectHotel.vue============================= */
+
+/* 头部返回按钮start */
+.headerleft{
+    height: 4rem;
+}
+.headerleft .return_left{
+    display: block;
+    width: 4rem;
+    height: 100%;
+    background-image: url("./images/return_left.png");
+    background-repeat: no-repeat;
+    background-size: 2.5rem 2.5rem;
+    background-position: center;
+}
+
+/* 头部返回按钮end */
+
+/* hotel 列表 start */
+.hotelList_main .list-id{
+    margin: 0  1rem;
+}
+.hotelList_main .list-id li{
+    border-bottom: 1px solid #eeeeee;
+    padding-top:1rem;
+}
+.hotelList_main .list-id .bg-purple img{
+    width: 100%;
+    height: 13rem;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_name{
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 0.352rem;
+    line-height: 2rem;
+    color: #212121;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_addr{
+    font-size: 1.2rem;
+    color: #9e9e9e;
+    line-height: 1.5rem;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_score{
+    height: 3rem;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_score .Fraction{
+  
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: #08b2cc;
+    margin-right: 0.4rem;
+
+}
+.hotelList_main .list-id .bg-purple-light .hotel_score .feel{
+    font-size: 1.7rem;
+    font-weight: 700;
+    /* line-height: 3rem; */
+    color: #08b2cc;
+    margin-right: 1rem;
+    float: right;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_ok_btn{
+    width: 4rem;
+    height: 1.5rem;
+    border: 1px solid rgb(76, 175, 80);
+    color: rgb(76, 175, 80);
+    line-height: 1.5rem;
+    border-radius: 0.3rem;
+    opacity: .5;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price{
+    height: 4rem;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .price_discount{
+    display:block;
+    width: 50%;
+    height: 100%;
+
+    float: right;
+    position: relative;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .price_discount .diamond{
+    width: 80%;
+    height:50%;
+    background-color: red;
+    transform:skew(-30deg);
+    -webkit-transform: skew(-30deg);   -moz-transform: skew(-30deg);   -o-transform:skew(-30deg);   -ms-transform:skew(-30deg);  
+    display: inline-block;
+    /* margin: 1rem 0 0 1rem; */
+    margin-top: 0.75rem;
+    margin-left: 0.9rem;
+    background: linear-gradient(90deg,#ffa087,#ff4d1c);
+    
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .price_discount p{
+    display: inline-block;
+    width: 75%;
+    height: 50%;
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    color: #fff
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .floor_price{
+    display: block;
+    width: 30%;
+    height: 100%;
+
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .floor_price .biaozhi{
+    font-size: 1.3rem;
+    color: #ff714a;
+    text-align: right;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .floor_price .floor_price_num{
+    font-size:2.5rem;
+    color: #ff714a;
+    text-align: right;
+    font-weight: 700;
+}
+.hotelList_main .list-id .bg-purple-light .hotel_price .floor_price .floor_price_qi
+{
+    font-size:1.3rem;
+    color: #ff714a;
+    text-align: right;
+}
+/* hotel 列表 end */
+/* ========================酒店列表页end  SelectHotel.vue============================= */

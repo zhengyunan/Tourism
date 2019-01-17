@@ -35,10 +35,6 @@
        </footer>
    </div>
 </template>
-<style scoped>
-@import '../assets/style.css';
-</style>
-
 <script>
 export default {
      methods:{

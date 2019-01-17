@@ -1,13 +1,17 @@
 <template>
     <div>
-        <div class="bodycss">
+      <div class="bodycss">
+        <!-- 顶部返回按钮 以及红包和附近酒店按钮start -->
         <header>
             <div class="hotel_topImg">
-               <router-link class="left_topimg" to="/"><i class="return_ioc left_ioc"></i></router-link>
+               <router-link class="left_topimg" to="/"><i class="el-icon-search"></i><i class="return_ioc left_ioc"></i></router-link>
                <router-link class="middle_topimg" to=""><i class="ioc middle_ioc"></i><p>代金卷</p></router-link>
                <router-link class="right_topimg" to=""><i class="ioc right_ico"></i><p>附近酒店</p></router-link>
             </div> 
         </header>
+        <!-- 顶部返回按钮 以及红包和附近酒店按钮end -->
+
+        <!-- 全日房和钟点房相互切换 tab start-->
         <div class="line-tab-box">
             <el-tabs>
                 <el-tab-pane label="全日房" class="allday">
@@ -23,16 +27,12 @@
                             <el-col :span="6"><div class="grid-dingwei bg-purple-light my_location border_botttom"><i class="dingwei"></i><p>我的位置</p></div></el-col>
                         </el-row>
                     </div>
-                    <div class="date location">
+                    <div class="date">
                         <el-row :gutter="5" class="border_botttom">
                             <el-col :span="4"><div class="grid-content bg-purple"><i class="el-icon-date"></i></div></el-col>
                             <el-col :span="18"><div class="grid-line bg-purple-light midd_ul">
                                 <ul>
                                     <li>
-                                        <!-- <span class="date_xuanze date_month">01月</span>
-                                        <span class="date_xuanze date_day">15日</span>
-                                        <span class="check-in_time">明天</span>
-                                        <span class="check-in check-in_time">入住</span> -->
                                         <el-date-picker
                                                 v-model="create_start_date"
                                                 type="date"
@@ -40,15 +40,8 @@
                                                 format="yyyy-MM-dd"
                                                 placeholder="">
                                         </el-date-picker>
-                                        
-
                                     </li>
                                     <li>
-                                        <!-- <span class="date_xuanze date_month">01月</span>
-                                        <span class="date_xuanze date_day">16日</span>
-                                        <span class="check-in_time">后天</span>
-                                        <span class="check-in check-in_time">离店</span>
-                                        <span class="check-in check-in_time">共1晚</span> -->
                                         <el-date-picker
                                                 v-model="create_end_date"
                                                 type="date"
@@ -82,9 +75,11 @@
                         </el-row>
                     </div>
                     <div class="search_btn location">
-                        <div class="btn_button">
-                            <router-link to="/selectHotel">搜索</router-link>
-                        </div>
+                        <router-link to="/selectHotel">
+                            <div class="btn_button">
+                                搜索
+                            </div>
+                        </router-link>
                     </div>
                     <div class="other-link">
                         <el-row>
@@ -95,7 +90,6 @@
                         </el-row>
                     </div>
                 </el-tab-pane>
-                
                 <el-tab-pane label="钟点房" class="clock">
                     <div class="location">
                         <el-row :gutter="5" class="border_botttom">
@@ -105,7 +99,7 @@
                             <el-col :span="6"><div class="grid-dingwei bg-purple-light my_location border_botttom"><i class="dingwei"></i><p>我的位置</p></div></el-col>
                         </el-row>
                     </div>
-                    <div class="date location">
+                    <div class="location">
                         <el-row :gutter="5" class="border_botttom">
                             <el-col :span="4"><div class="grid-content bg-purple"><i class="el-icon-date"></i></div></el-col>
                             <el-col :span="18"><div class="grid-line bg-purple-light midd_ul">
@@ -140,14 +134,16 @@
                         </el-row>
                     </div>
                     <div class="search_btn location">
-                        <div class="btn_button">
-                            <router-link to="/selectHotel">搜索</router-link>
-                        </div>
+                         <router-link to="/selectHotel">
+                            <div class="btn_button">
+                            搜索
+                            </div>
+                        </router-link>
                     </div>
                     <div class="other-link">
                         <el-row>
                             <el-col :span="12"><div class="grid-content bg-purple other-link_css">最近浏览</div></el-col>
-                            <el-col :span="12"><div class="grid-content bg-purple-light other-link_css">我的订单</div></el-col>
+                            <el-col :span="12"><div class="grid-content bg-purple-light other-link_css last_link">我的订单</div></el-col>
                         </el-row>
                     </div>
                 
@@ -155,53 +151,53 @@
                 </el-tab-pane>
             </el-tabs>
         </div>
-        <!-- 弹出框全日 -->
-         <wv-popup :visible.sync="popupVisible1" :height="400">
-            <div class="start">
-                <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="allday_startClick(v,k)" :key="k">{{v}}</wv-button>
-                
-            </div>
-            <div class="search_price">
-               <p>价格:</p><el-slider
-                v-model="value1"
-                range
-                :step="20"
-                :show-stops="true"
-                :show-input="true"
-                :max="500">
-                </el-slider>
-            </div>
-        </wv-popup>
-        <!-- 全日弹出框end -->
-        <!-- 钟点房弹出框 -->
-        <wv-popup :visible.sync="popupVisible2" :height="400">
-            <div class="start">
-                <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="clock_startClick(v,k)" :key="k">{{v}}</wv-button>
-                
-            </div>
-            <div class="clock_time">
-                <wv-button type="default" :id="k==timeIndex?'border_start':''" :mini="true" v-for="(v,k) in timeClass"  @click="clock_timeClick(v,k)" :key="k">{{v}}</wv-button>
-            </div>
-            <div class="search_price">
-               <p>价格:</p><el-slider
-                v-model="value2"
-                range
-                :step="20"
-                :show-stops="true"
-                :show-input="true"
-                :max="100">
-                </el-slider>
-            </div>
-        </wv-popup>
-        <!-- 钟点房弹出框end -->
-
-       
-    </div>
+        <!-- 全日房和钟点房相互切换 tab end -->
+        <!-- 全日房 和钟点房 弹出框公共样式 start -->
+        <div class="tanchu">
+            <!-- 弹出框全日 -->
+            <wv-popup :visible.sync="popupVisible1" :height="400">
+                <div class="start">
+                    <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="allday_startClick(v,k)" :key="k">{{v}}</wv-button>
+                    
+                </div>
+                <div class="search_price">
+                <p>价格:</p><el-slider
+                    v-model="value1"
+                    range
+                    :step="20"
+                    :show-stops="true"
+                    :show-input="true"
+                    :max="500">
+                    </el-slider>
+                </div>
+            </wv-popup>
+            <!-- 全日弹出框end -->
+            <!-- 钟点房弹出框 -->
+            <wv-popup :visible.sync="popupVisible2" :height="400">
+                <div class="start">
+                    <wv-button type="default" :id="k==startIndex?'border_start':''" :mini="true" v-for="(v,k) in starClass" @click="clock_startClick(v,k)" :key="k">{{v}}</wv-button>
+                    
+                </div>
+                <div class="clock_time">
+                    <wv-button type="default" :id="k==timeIndex?'border_start':''" :mini="true" v-for="(v,k) in timeClass"  @click="clock_timeClick(v,k)" :key="k">{{v}}</wv-button>
+                </div>
+                <div class="search_price">
+                <p>价格:</p><el-slider
+                    v-model="value2"
+                    range
+                    :step="20"
+                    :show-stops="true"
+                    :show-input="true"
+                    :max="100">
+                    </el-slider>
+                </div>
+            </wv-popup>
+            <!-- 钟点房弹出框end -->
+        </div>
+         <!-- 全日房 和钟点房 弹出框公共样式 end -->
+      </div>
     </div>
 </template>
-<style scoped>
-@import "../assets/hotelSearch.css";
-</style>
 <script>
 export default {
   data() {

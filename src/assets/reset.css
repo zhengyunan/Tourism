@@ -1,6 +1,6 @@
-.el-main{
+/* .el-main{
     overflow: hidden;
-}
+} */
 html {
     overflow-x:auto;
     overflow-y:scroll;
@@ -221,6 +221,3 @@ a{
     text-decoration: none;
     color: #330033;
 }
-/* a:hover{
-    color: #f56C6c;
-} */

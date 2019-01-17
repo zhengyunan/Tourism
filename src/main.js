@@ -6,6 +6,7 @@ import WeVue from 'we-vue'
 import 'we-vue/lib/style.css'
 import "./assets/reset.css"
 import './Element.js'
+
 // 实现轮播
 import { Swipe, SwipeItem } from 'we-vue'
 Vue.use(Swipe).use(SwipeItem)
