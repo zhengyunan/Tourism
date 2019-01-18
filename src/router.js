@@ -44,6 +44,11 @@ export default new Router({
       path: '/selectHotel',
       name: 'SelectHotel',
       component: () => import('./views/HotelChild/SelectHotel.vue')
+    },
+    {
+      path: '/hoteldetails',
+      name: 'HotelDetails',
+      component: () => import('./views/HotelChild/HotelDetails.vue')
     }
     
   ]
